@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.1.32/sell?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#    serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+  jpa:
+#    hibernate:
+#      ddl-auto: update添加此配置后，可以不用设置主键自增
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 192.168.1.32
+    port: 6379
+  main:
+    allow-bean-definition-overriding: true
+server:
+  servlet:
+    context-path: /sell
+#日志
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+##  path: F:\java res\longtest
+#  file: F:\java res\longtest\sell.log
+#  level:
+#    com.imooc.sell.LoggerTest: debug
+projectUrl:
+  sell: http://localhost:8080/sell
